@@ -46,7 +46,7 @@ namespace ClothingStore
                 switch (tradetype)
                 {
                     case 1:
-                        Console.WriteLine( shirt.Trade(TradeType.Sell, tradeNo));
+                        Console.WriteLine(shirt.Trade(TradeType.Sell, tradeNo));
                         break;
                     case 2:
                         Console.WriteLine(shirt.Trade(TradeType.Buy, tradeNo));

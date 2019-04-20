@@ -29,6 +29,15 @@ namespace ClothingStore.Model
         /// </summary>
         public List<IOption> Options { get; set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public DShirt()
+        {
+            this.Options = new List<IOption>();
+            this.Options.Add(new Color());
+            this.Options.Add(new Size());
+        }
 
         /// <summary>
         /// Trading action.
