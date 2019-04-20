@@ -1,4 +1,7 @@
-﻿namespace ClothingStore.Model
+﻿using ClothingStore.Option;
+using System.Collections.Generic;
+
+namespace ClothingStore.Model
 {
     /// <summary>
     /// BuyTrading implementation for ITrade
@@ -16,9 +19,9 @@
         /// <param name="rate">Sell or Buy rate</param>
         /// <param name="number">NUmber of sell or buy</param>
         /// <returns>Result string</returns>
-        public string Execute(int rate, int number)
+        public string Execute(int rate, int number, List<IOption> options)
         {
-            return string.Format(notify, number, rate);
+            return string.Format(notify, number, rate) + "\r\n" + OptionUtility.PrintOption(options);
         }
     }
 }

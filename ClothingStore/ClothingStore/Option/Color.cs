@@ -10,13 +10,11 @@ namespace ClothingStore.Option
     {
         private string name = OptionType.Color.ToString();
 
-        private List<Property> options = new List<Property>
-        {
-            new Property { Description ="", Value = "Blue"},
-            new Property { Description ="", Value = "Red"}
-        };
+        private List<Property> options;
 
-        string IOption.Name
+        private string type = "string";
+
+        public string Name
         {
             get
             {
@@ -28,7 +26,7 @@ namespace ClothingStore.Option
             }
         }
 
-        List<Property> IOption.Options
+        public List<Property> Options
         {
             get
             {
@@ -37,6 +35,18 @@ namespace ClothingStore.Option
             set
             {
                 this.options = value;
+            }
+        }
+
+        public string Type
+        {
+            get
+            {
+                return this.type;
+            }
+            set
+            {
+                this.type = value;
             }
         }
     }

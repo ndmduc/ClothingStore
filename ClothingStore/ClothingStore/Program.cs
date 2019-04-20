@@ -1,5 +1,6 @@
 ﻿using ClothingStore.Function;
 using ClothingStore.Model;
+using ClothingStore.Option;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,13 +44,17 @@ namespace ClothingStore
                 Console.WriteLine("Please choose number of item you want to trading:");
                 var tradeNo = int.Parse(Console.ReadLine().ToString());
 
+                // User make a number to trade.
+                Console.WriteLine("Please choose option for item you want to trading:");
+                var opts = OptionUtility.GetOption(shirt.Options);
+
                 switch (tradetype)
                 {
                     case 1:
-                        Console.WriteLine(shirt.Trade(TradeType.Sell, tradeNo));
+                        Console.WriteLine(shirt.Trade(TradeType.Sell, tradeNo, opts));
                         break;
                     case 2:
-                        Console.WriteLine(shirt.Trade(TradeType.Buy, tradeNo));
+                        Console.WriteLine(shirt.Trade(TradeType.Buy, tradeNo, opts));
                         break;
                     default:
 

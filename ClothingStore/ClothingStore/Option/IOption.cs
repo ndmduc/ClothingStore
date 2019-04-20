@@ -11,5 +11,7 @@ namespace ClothingStore.Option
         string Name { get; set; }
 
         List<Property> Options { get; set; }
+
+        string Type { get; set; }
     }
 }

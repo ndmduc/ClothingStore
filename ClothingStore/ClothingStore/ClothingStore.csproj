@@ -52,6 +52,7 @@
     <Compile Include="Model\TShirt.cs" />
     <Compile Include="Option\Color.cs" />
     <Compile Include="Option\IOption.cs" />
+    <Compile Include="Option\OptionUtility.cs" />
     <Compile Include="Option\Property.cs" />
     <Compile Include="Option\OptionType.cs" />
     <Compile Include="Option\Size.cs" />

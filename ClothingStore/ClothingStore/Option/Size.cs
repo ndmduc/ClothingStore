@@ -6,13 +6,11 @@ namespace ClothingStore.Option
     {
         private string name = OptionType.Size.ToString();
 
-        private List<Property> options = new List<Property>
-        {
-            new Property { Description ="", Value = 39},
-            new Property { Description ="", Value = 40}
-        };
+        private List<Property> options;
 
-        string IOption.Name
+        private string type = "int";
+
+        public string Name
         {
             get
             {
@@ -24,7 +22,7 @@ namespace ClothingStore.Option
             }
         }
 
-        List<Property> IOption.Options
+        public List<Property> Options
         {
             get
             {
@@ -33,6 +31,18 @@ namespace ClothingStore.Option
             set
             {
                 this.options = value;
+            }
+        }
+
+        public string Type
+        {
+            get
+            {
+                return this.type;
+            }
+            set
+            {
+                this.type = value;
             }
         }
     }
